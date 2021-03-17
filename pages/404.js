@@ -7,7 +7,7 @@ export default function FourOhFour() {
     
 
     <div className={styles.error}>
-      <h1>404 - Programação não encontrada</h1>
+      <h1>404 - Page not found</h1>
       <img src="/icons/travolta.gif" alt="lost"  className={styles.gif}/>
     </div>
     </div>

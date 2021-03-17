@@ -4,25 +4,50 @@
   overflow: auto;
 }
 
-:root{
-  --background: #F7F3F7;
-  --text-white: #FDF6F9;
-  --background-footer: #E9E3E9;
-  --backgrond-pick: linear-gradient(180deg, #B73D7C 0%, #943781 48.96%, #6D3187 100%);
-  --background-navbar: linear-gradient(90deg, #C00F4F 1.79%, #BC1052 1.79%, #A5175F 49.56%, #8B206F 98.17%);
-  --background-card: #FFFFFF;
-  --background-field: linear-gradient(170.59deg, #A2377D 1.56%, #8F327E 49.16%, #782D80 98.79%);;
-  --background-button: linear-gradient(180deg, #A3387B 0%, #94367E 53.12%, #853481 100%);
-  --button-shadow: 0px 8px 18px 2px #FFC2F5;
-  --text-my-teams: #552C8A;
+:root {
+  --background: #f7f3f7;
+  --text-white: #fdf6f9;
+  --background-footer: #e9e3e9;
+  --backgrond-pick: linear-gradient(
+    180deg,
+    #b73d7c 0%,
+    #943781 48.96%,
+    #6d3187 100%
+  );
+  --background-navbar: linear-gradient(
+    90deg,
+    #c00f4f 1.79%,
+    #bc1052 1.79%,
+    #a5175f 49.56%,
+    #8b206f 98.17%
+  );
+  --background-card: #ffffff;
+  --background-field: linear-gradient(
+    170.59deg,
+    #a2377d 1.56%,
+    #8f327e 49.16%,
+    #782d80 98.79%
+  );
+  --background-button: linear-gradient(
+    180deg,
+    #a3387b 0%,
+    #94367e 53.12%,
+    #853481 100%
+  );
+  --button-shadow: 0px 8px 18px 2px #ffc2f5;
+  --text-my-teams: #552c8a;
   --text-list: #333333;
-  --text-create-title: #8E8E8E;
+  --text-create-title: #8e8e8e;
+  --separator-line: #eeeeee;
 }
 
-body{
+body {
   background: var(--background);
 }
 
-body, input, textarea, button{
-  font: 400 16px "Inter", sans-serif;
+body,
+input,
+textarea,
+button {
+  font: 400 16px 'Inter', sans-serif;
 }
