@@ -3,10 +3,11 @@ import styles from "../styles/Home.module.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
+import App from "./components/TableSavedTeams";
 
 export default function Home() {
   return (
-    <div style={{ overflow: 'hidden' }}>
+    <div>
 
       <Head>
         <title>Squad Management Tool</title>
@@ -21,21 +22,19 @@ export default function Home() {
         <div className={styles.myTeamCard}>
           <div className={styles.myTeamTopBar}>
             <h1>My teams</h1>
+            
 
             <Link href="/newteam">
             <button className={styles.myTeamCardButton}>+</button>
             </Link>
+            
 
           </div>
+          <hr></hr>
           <div className={styles.myTeamlist}>
-            <p>Name</p>
-            <p>Description</p>
-            <table>
-              <tr>
-                <th><option></option></th>
-                <th><option></option></th>
-              </tr>
-            </table>
+            <button>Name <span className={styles.iconEmbed}></span></button>
+            <button>Description <span className={styles.iconEmbed}></span></button>
+            <App></App>
           </div>
         </div>
 
@@ -44,6 +43,7 @@ export default function Home() {
             <div className={styles.myTopBar}>
               <h1>Top 5</h1>
             </div>
+            <hr></hr>
             <div className={styles.myToplist}>
                 <p>Highest avg age</p>
                 <p>Lowest avg age</p>

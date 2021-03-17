@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Head from "next/head";
 import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
@@ -36,6 +35,7 @@ export default function NewTeam({data}) {
            placeholder="Search"
            value={searchTerm}
            onChange={handleChange}
+           className={styles.inputFilter}
          />
          <ul>
            {searchTerm ? 
@@ -82,31 +82,36 @@ export default function NewTeam({data}) {
           <div className={styles.left}>
 
             <label htmlFor="name">Team name</label>
-            <input id="name" name="name" type="text" placeholder="Insert team name"/>
+            <input id="name" name="name" type="text" placeholder="Insert team name" required/>
             <label htmlFor="name">Description</label>
-            <input id="description" description="description" type="text"/>
+            <input className={styles.description} description="description" type="text" height="50rem"/>
 
 
           </div>
           <div className={styles.right}>
             <label htmlFor="website">Team website</label>
-            <input id="website" name="website" type="text" placeholder="http://myteam.com"/>
+            <input id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
 
-            <label htmlFor="name">Team type</label>
-            <div className={styles.teamType}>
-              <label className={styles.teamTypeRadioButton}>Real
-                <input type="radio" name="choice" />
-                <span className={styles.checkMark}></span>
-              </label>
-              <label className={styles.teamTypeRadioButton}>Fantasy
-                <input type="radio" name="choice"/>
-                <span className={styles.checkMark}></span>
-              </label>
+            <label className={styles.teamTypeLabel} htmlFor="name">Team type</label>
+            <div className={styles.teamType} required>
+              <section>
+                <label className={styles.teamTypeRadioButton}>
+                  <p>Real</p>
+                  <input type="radio" name="choice" />
+                  <span className={styles.checkMark}></span>
+                </label>
+                <label className={styles.teamTypeRadioButton}>
+                  <p>Fantasy</p>
+                  <input type="radio" name="choice"/>
+                  <span className={styles.checkMark}></span>
+                </label>
+              </section>
             </div>
             
-            <label htmlFor="name">Tags</label>
-            <input id="tags" description="tags" type="text"/>
+            <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
+            <input className={styles.tagInput} id="tags" description="tags" type="text"/>
           </div>
+          
         </div>
 
         <div className={styles.titleArea}>
@@ -115,9 +120,25 @@ export default function NewTeam({data}) {
 
         <div className={styles.configureSquadContainer}>
           <div className={styles.formation}>
-            <label htmlFor="formation">Formation</label>
-            <input id="name" name="name" type="text" placeholder="Insert team name"/>
-            <div className={styles.field}>formation image</div>
+            <label htmlFor="formation">Formation        
+              <select name="formatioon" id="formatioon">
+                <option value="3-2-2-3">3 - 2 - 2 - 3</option>
+                <option value="3-2-3-1">3 - 2 - 3 - 1</option>
+                <option value="3-4-3">3 - 4 - 3</option>
+                <option value="3-5-2">3 - 5 - 2</option>
+                <option value="4-2-3-1">4 - 2 - 3 - 1</option>
+                <option value="4-3-2">4 - 3 - 2</option>
+                <option value="4-4-2">4 - 4 - 2</option>
+                <option value="4-5-1">4 - 5 - 1</option>
+                <option value="5-4-1">5 - 4 -1</option>       
+              </select>
+            </label>
+            
+            <div className={styles.field}>
+              <div className={styles.fieldLines}></div>
+              <div className={styles.circle}><hr/></div>
+              <div className={styles.fieldLines}></div>            
+            </div>
             <button>Save</button>
           </div>
           <div className={styles.players}>           
@@ -148,14 +169,17 @@ NewTeam.getInitialProps = async (ctx) => {
   };
 
   let list = []
-  const res = await fetch("https://api.football-data.org/v2/teams/18", requestOptions)
-  const json = await res.json()
-
-  json.squad.map((player) => {
-  [player].filter((name) =>{
-    list.push(name.name)
+  let jsonList = []
+  for(let i=1;i<5;i++){
+    let id=i
+    const res = await fetch(`https://api.football-data.org/v2/players/${id}`, requestOptions)
+    const json = await res.json()
+    jsonList.push(json)
   }
-  )})
+  console.log(jsonList)
+  jsonList.map((player) => {
+    list.push(player.name)
+  })
   console.log(list)
   
   return{ data: list}

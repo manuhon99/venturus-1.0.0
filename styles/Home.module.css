@@ -3,21 +3,28 @@
   justify-content: space-around;
   align-items: baseline;
   position: absolute;
-  height: 100%;
+  height: 90%;
   width: 100%;
 }
 
-.myTeamCard{
+.container hr {
+  border: 0;
+  border-top: 1px solid var(--separator-line);
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.myTeamCard {
   background: var(--background-card);
   justify-content: center;
-  width: 29rem;
-  height: 28rem;
+  width: 37rem;
+  height: 94%;
   border-radius: 9px;
   margin-left: 1rem;
   margin-top: 2rem;
 }
 
-.myTeamTopBar{
+.myTeamTopBar {
   margin-left: 2rem;
   margin-top: 2rem;
   display: flex;
@@ -28,10 +35,9 @@
   color: var(--text-my-teams);
 }
 
-.myTeamCardButton{
+.myTeamCardButton {
   margin-right: 2rem;
   background: var(--background-button);
-
   border-radius: 8px;
   width: 40px;
   height: 40px;
@@ -42,43 +48,54 @@
   border: none;
 }
 
-.myTeamlist{
+.myTeamlist {
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.myTeamlist button {
   font-family: Roboto;
   font-weight: 600;
   font-size: small;
   color: var(--text-list);
-
+  background-color: transparent;
+  border: 2px solid transparent; /* Green */
+  cursor: pointer;
 }
 
-.topContainer{
+.iconEmbed::before {
+  display: inline-block;
+  content: '◀▶'; /* Actual icon here: content: "\ea7f";*/
+  font-size: 0.6em; /* styling */
+  transform: rotate(90deg);
+}
+
+.topContainer {
   margin-left: -1rem;
   margin-top: 1rem;
 }
 
-
-.average{
+.average {
   background: var(--background-card);
   border-radius: 9px;
-  height: 16rem;
-  width: 29rem;
-  margin-right: .5rem;
+  height: 20rem;
+  width: 37rem;
+  margin-right: 0.5rem;
 }
 
-
-.myTopBar{
+.myTopBar {
   padding-top: 2rem;
   padding-left: 2rem;
   font-family: Roboto;
   font-weight: 500;
   font-size: small;
   color: var(--text-my-teams);
+  margin-bottom: 1.5rem;
 }
 
-.myToplist{
+.myToplist {
   padding-top: 1rem;
   display: flex;
   justify-content: space-around;
@@ -89,20 +106,17 @@
   color: var(--text-list);
 }
 
-
-.pick{
+.pick {
   background: var(--backgrond-pick);
   border-radius: 9px;
   display: flex;
-  height: 9rem;
-  width: 29rem;
+  height: 14rem;
+  width: 37rem;
   font-family: Roboto;
   font-weight: 500;
-  font-size: .5rem;
+  font-size: 0.5rem;
   color: var(--background-card);
   justify-content: space-around;
   margin-top: 1rem;
   padding-top: 2rem;
 }
-
-

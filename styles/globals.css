@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: auto;
 }
 
 :root {
@@ -34,11 +33,26 @@
     #94367e 53.12%,
     #853481 100%
   );
+  --background-save-button: linear-gradient(
+    180deg,
+    #98347d 0%,
+    #8b317e 47.4%,
+    #7c2d7f 100%
+  );
   --button-shadow: 0px 8px 18px 2px #ffc2f5;
   --text-my-teams: #552c8a;
   --text-list: #333333;
   --text-create-title: #8e8e8e;
   --separator-line: #eeeeee;
+  --input-border: F1F1F1;
+  --team-type-button-selected: linear-gradient(
+    180deg,
+    #b43c7b 0%,
+    #a6397d 50.52%,
+    #99377f 100%
+  );
+  --team-type-letter: #d2d2d2;
+  --field-line: #b173a3;
 }
 
 body {
