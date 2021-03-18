@@ -39,19 +39,21 @@ class App extends React.Component {
 
     return (
      
-      <div className={styles.formation}>Formation
-        <Select className={styles.select}
-          value={selectedOption}
-          onChange={this.handleChange}
-          options={options}
-          defaultValue='3-4-3'
-        />
+      <div >
+        <div className={styles.topItems}>Formation
+          <Select className={styles.select}
+            value={selectedOption}
+            onChange={this.handleChange}
+            options={options}
+            defaultValue='3-4-3'
+          />
+        </div>
       
-      <div className={styles.field}>
-      <List  formation={formation}></List>
-      </div>
+        <div className={styles.field}>
+          <List  formation={formation}></List>
+        </div>
        
-      </div>
+     </div>
 
       
     );

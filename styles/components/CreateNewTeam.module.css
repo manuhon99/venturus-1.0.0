@@ -96,6 +96,12 @@
   margin-top: 2rem;
 }
 
+.formation {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 9rem;
+}
 .formation button {
   margin-top: 1rem;
   padding-top: 0.6rem;
