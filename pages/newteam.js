@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
@@ -41,28 +41,26 @@ export default function NewTeam({data}) {
            className={styles.inputFilter}
          />
          <ul>
-           {searchTerm ? 
+           {searchTerm &&
             (searchResults.map(item => (
-             <li>{item}</li>
-            
+            <div className={styles.playersList}>
+              <div className={styles.nameNacionality}>
+                <li>Name: {item}</li>
+                <li>Nacionality: {item}</li>
+              </div>
+              <div className={styles.age}>
+                <li>Age: {item}</li>
+              </div>
+            </div>
            )))
-            :
-            (<li></li>)
             }
          </ul>
        </div>
      );
    }
 
-
-   
-
-   
-
-
   return (
     <div>
-
       <Head>
         <title>Squad Management Tool</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
