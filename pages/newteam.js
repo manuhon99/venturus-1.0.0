@@ -4,6 +4,7 @@ import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import DraggableComponent from "./components/Draggble";
+import Example from "./components/Tag";
 
 export default function NewTeam({data}) {
 
@@ -111,6 +112,7 @@ export default function NewTeam({data}) {
             
             <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
             <input className={styles.tagInput} id="tags" description="tags" type="text"/>
+            <Example></Example>
           </div>
           
         </div>
