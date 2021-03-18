@@ -34,9 +34,9 @@
 
 .select {
   margin-left: 2rem;
-  padding: -10px;
   color: var(--text-list);
   font-weight: 700;
-  font-size: 0.7rem;
-  width: 10rem;
+  font-size: 0.8rem;
+  width: 9rem;
+  display: inline-block;
 }
