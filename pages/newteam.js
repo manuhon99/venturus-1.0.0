@@ -136,10 +136,7 @@ export default function NewTeam({data}) {
             </label>
             
             <div className={styles.field}>
-              <div className={styles.fieldLines}></div>
-              <div className={styles.circle}><hr/></div>
-              <div className={styles.fieldLines}></div>     
-              <DraggableComponent></DraggableComponent>       
+              <img src="/icons/playericon.svg" className={styles.img} alt="player"/>  
             </div>
             <button>Save</button>
           </div>
@@ -150,6 +147,7 @@ export default function NewTeam({data}) {
             <hr></hr>
             
           </div>
+          <DraggableComponent></DraggableComponent>     
           
         </div>
 

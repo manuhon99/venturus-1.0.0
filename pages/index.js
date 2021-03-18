@@ -4,6 +4,8 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 import App from "./components/TableSavedTeams";
+import Delete from "./components/Delete";
+import Edit from "./components/Edit";
 
 export default function Home() {
   return (
@@ -32,9 +34,9 @@ export default function Home() {
           </div>
           <hr></hr>
           <div className={styles.myTeamlist}>
-            <button>Name <span className={styles.iconEmbed}></span></button>
-            <button>Description <span className={styles.iconEmbed}></span></button>
             <App></App>
+            <Delete></Delete>
+            <Edit></Edit>
           </div>
         </div>
 
@@ -53,9 +55,11 @@ export default function Home() {
           <div className={styles.pick}>
             <div className={styles.pickMost}>
               <h1>Most picked player</h1>
+              <img src="/icons/grayguy.svg" className={styles.img} alt="player1"/>
             </div>
             <div className={styles.pickLess}>
               <h1>Less picked player</h1>
+              <img src="/icons/blondeguy.svg" className={styles.img} alt="player2"/>
             </div>
           </div>
 

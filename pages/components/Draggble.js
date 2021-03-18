@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
 
 const quickAndDirtyStyle = {
-  width: "20px",
-  height: "20px",
+  width: "100px",
+  height: "40px",
   background: "#FF9900",
   color: "#FFFFFF",
   display: "flex",
@@ -39,7 +39,7 @@ const DraggableComponent = () => {
       onMouseMove={ onMouseMove }
       onMouseDown={ () => setPressed(true) }
       onMouseUp={ () => setPressed(false) }>
-      <p>{ pressed ? "Dragging..." : "Press to drag" }</p>
+      <p>{ pressed ? "D" : "P" }</p>
     </div>
   )
 }

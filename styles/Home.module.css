@@ -49,10 +49,14 @@
 }
 
 .myTeamlist {
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 0.85rem;
   margin-top: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: 1.2rem;
 }
 
 .myTeamlist button {
@@ -63,13 +67,6 @@
   background-color: transparent;
   border: 2px solid transparent; /* Green */
   cursor: pointer;
-}
-
-.iconEmbed::before {
-  display: inline-block;
-  content: '◀▶'; /* Actual icon here: content: "\ea7f";*/
-  font-size: 0.6em; /* styling */
-  transform: rotate(90deg);
 }
 
 .topContainer {
@@ -107,7 +104,9 @@
 }
 
 .pick {
-  background: var(--backgrond-pick);
+  background: url('../public/icons/mostpickedfieldline.svg') no-repeat center
+      top,
+    var(--backgrond-pick);
   border-radius: 9px;
   display: flex;
   height: 14rem;
