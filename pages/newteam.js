@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import DraggableComponent from "./components/Draggble";
 
 export default function NewTeam({data}) {
 
@@ -137,7 +138,8 @@ export default function NewTeam({data}) {
             <div className={styles.field}>
               <div className={styles.fieldLines}></div>
               <div className={styles.circle}><hr/></div>
-              <div className={styles.fieldLines}></div>            
+              <div className={styles.fieldLines}></div>     
+              <DraggableComponent></DraggableComponent>       
             </div>
             <button>Save</button>
           </div>
