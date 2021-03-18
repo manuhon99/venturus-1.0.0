@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import DraggableComponent from "./components/Draggble";
 import Example from "./components/Tag";
 import App from "./components/SelectFormation";
+import Draggable from "react-draggable";
+
 
 export default function NewTeam({data}) {
 
@@ -43,6 +45,7 @@ export default function NewTeam({data}) {
          <ul>
            {searchTerm &&
             (searchResults.map(item => (
+              <Draggable>
             <div className={styles.playersList}>
               <div className={styles.nameNacionality}>
                 <li>Name: {item}</li>
@@ -52,6 +55,7 @@ export default function NewTeam({data}) {
                 <li>Age: {item}</li>
               </div>
             </div>
+            </Draggable>
            )))
             }
          </ul>
@@ -132,9 +136,7 @@ export default function NewTeam({data}) {
             <Filter/>
             <hr></hr>
             
-          </div>
-          <DraggableComponent></DraggableComponent>     
-          
+          </div>          
         </div>
 
       </div>      
