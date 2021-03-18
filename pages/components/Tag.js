@@ -1,8 +1,10 @@
 import React from "react";
 import TagsInput from "react-tagsinput";
-import "react-tagsinput/react-tagsinput.css";
+
+
 
 class Example extends React.PureComponent {
+  
   constructor() {
     super();
     this.tagsinput = React.createRef();
@@ -21,12 +23,14 @@ class Example extends React.PureComponent {
     this.setState({ tag: value });
   };
   render() {
+    
     return (
+      
       <TagsInput
         onlyUnique
         ref={this.tagsinput}
         inputProps={{
-          placeholder: "添加标签"
+          placeholder: "Defense"
         }}
         value={this.state.tags}
         onChange={this.handleChange}

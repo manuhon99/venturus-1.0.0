@@ -92,7 +92,7 @@ export default function NewTeam({data}) {
           </div>
           <div className={styles.right}>
             <label htmlFor="website">Team website</label>
-            <input id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
+            <input className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
 
             <label className={styles.teamTypeLabel} htmlFor="name">Team type</label>
             <div className={styles.teamType} required>
@@ -111,7 +111,6 @@ export default function NewTeam({data}) {
             </div>
             
             <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
-            <input className={styles.tagInput} id="tags" description="tags" type="text"/>
             <Example></Example>
           </div>
           

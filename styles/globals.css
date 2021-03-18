@@ -53,6 +53,8 @@
   );
   --team-type-letter: #d2d2d2;
   --field-line: #b173a3;
+  --border-color-inputs: #dadada;
+  --tag-background: #c50341;
 }
 
 body {
