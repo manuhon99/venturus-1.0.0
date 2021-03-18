@@ -1,12 +1,35 @@
-<svg width="428" height="629" viewBox="0 0 428 629" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="428" height="629" fill="url(#paint0_linear)"/>
-<path d="M0 312L427 311.5" stroke="#AC6B9F"/>
-<circle cx="215.5" cy="311.5" r="57" stroke="#A86CA0"/>
-<defs>
-<linearGradient id="paint0_linear" x1="147.5" y1="-24.5" x2="311.5" y2="648.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A2377D"/>
-<stop offset="0.489583" stop-color="#8F327E"/>
-<stop offset="1" stop-color="#782D80"/>
-</linearGradient>
-</defs>
+<svg width="394" height="581" viewBox="0 0 394 581" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="184" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M233.5 183.5C233.5 202.285 218.495 217.5 200 217.5C181.505 217.5 166.5 202.285 166.5 183.5C166.5 164.715 181.505 149.5 200 149.5C218.495 149.5 233.5 164.715 233.5 183.5Z" fill="#CD9BBE" stroke="#642862"/>
+<path d="M200 177V191M193 184H207" stroke="white" stroke-width="2"/>
+<circle cx="198" cy="40" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M231.5 39.5C231.5 58.2846 216.495 73.5 198 73.5C179.505 73.5 164.5 58.2846 164.5 39.5C164.5 20.7154 179.505 5.5 198 5.5C216.495 5.5 231.5 20.7154 231.5 39.5Z" fill="#D39CBE" stroke="#642862"/>
+<path d="M198 33V47M191 40H205" stroke="white" stroke-width="2"/>
+<circle cx="348" cy="180" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M381.5 179.5C381.5 198.285 366.495 213.5 348 213.5C329.505 213.5 314.5 198.285 314.5 179.5C314.5 160.715 329.505 145.5 348 145.5C366.495 145.5 381.5 160.715 381.5 179.5Z" fill="#CD9BBE" stroke="#642862"/>
+<path d="M348 173V187M341 180H355" stroke="white" stroke-width="2"/>
+<circle cx="131" cy="294" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M164.5 293.5C164.5 312.285 149.495 327.5 131 327.5C112.505 327.5 97.5 312.285 97.5 293.5C97.5 274.715 112.505 259.5 131 259.5C149.495 259.5 164.5 274.715 164.5 293.5Z" fill="#CC9ABF" stroke="#642862"/>
+<path d="M131 287V301M124 294H138" stroke="white" stroke-width="2"/>
+<circle cx="257" cy="291" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M290.5 290.5C290.5 309.285 275.495 324.5 257 324.5C238.505 324.5 223.5 309.285 223.5 290.5C223.5 271.715 238.505 256.5 257 256.5C275.495 256.5 290.5 271.715 290.5 290.5Z" fill="#C899BF" stroke="#642862"/>
+<path d="M257 284V298M250 291H264" stroke="white" stroke-width="2"/>
+<circle cx="40" cy="173" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M73.5 172.5C73.5 191.285 58.4947 206.5 40 206.5C21.5053 206.5 6.5 191.285 6.5 172.5C6.5 153.715 21.5053 138.5 40 138.5C58.4947 138.5 73.5 153.715 73.5 172.5Z" fill="#C598BF" stroke="#642862"/>
+<path d="M40 166V180M33 173H47" stroke="white" stroke-width="2"/>
+<circle cx="252" cy="442" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M285.5 441.5C285.5 460.285 270.495 475.5 252 475.5C233.505 475.5 218.5 460.285 218.5 441.5C218.5 422.715 233.505 407.5 252 407.5C270.495 407.5 285.5 422.715 285.5 441.5Z" fill="#C298BF" stroke="#642862"/>
+<path d="M252 435V449M245 442H259" stroke="white" stroke-width="2"/>
+<circle cx="40" cy="395" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M73.5 394.5C73.5 413.285 58.4947 428.5 40 428.5C21.5053 428.5 6.5 413.285 6.5 394.5C6.5 375.715 21.5053 360.5 40 360.5C58.4947 360.5 73.5 375.715 73.5 394.5Z" fill="#C699BF" stroke="#642862"/>
+<path d="M40 388V402M33 395H47" stroke="white" stroke-width="2"/>
+<circle cx="137" cy="442" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M170.5 441.5C170.5 460.285 155.495 475.5 137 475.5C118.505 475.5 103.5 460.285 103.5 441.5C103.5 422.715 118.505 407.5 137 407.5C155.495 407.5 170.5 422.715 170.5 441.5Z" fill="#C298BF" stroke="#642862"/>
+<path d="M137 435V449M130 442H144" stroke="white" stroke-width="2"/>
+<circle cx="354" cy="416" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M387.5 415.5C387.5 434.285 372.495 449.5 354 449.5C335.505 449.5 320.5 434.285 320.5 415.5C320.5 396.715 335.505 381.5 354 381.5C372.495 381.5 387.5 396.715 387.5 415.5Z" fill="#BF95BE" stroke="#642862"/>
+<path d="M354 409V423M347 416H361" stroke="white" stroke-width="2"/>
+<circle cx="191" cy="541" r="39.5" stroke="#A173C5" stroke-linejoin="bevel" stroke-dasharray="6 4"/>
+<path d="M224.5 540.5C224.5 559.285 209.495 574.5 191 574.5C172.505 574.5 157.5 559.285 157.5 540.5C157.5 521.715 172.505 506.5 191 506.5C209.495 506.5 224.5 521.715 224.5 540.5Z" fill="#BF97BF" stroke="#642862"/>
+<path d="M191 534V548M184 541H198" stroke="white" stroke-width="2"/>
 </svg>
