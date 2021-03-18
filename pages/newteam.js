@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import DraggableComponent from "./components/Draggble";
 import Example from "./components/Tag";
+import App from "./components/SelectFormation";
 
 export default function NewTeam({data}) {
 
@@ -53,8 +54,10 @@ export default function NewTeam({data}) {
      );
    }
 
+
    
 
+   
 
 
   return (
@@ -122,7 +125,8 @@ export default function NewTeam({data}) {
 
         <div className={styles.configureSquadContainer}>
           <div className={styles.formation}>
-            <label htmlFor="formation">Formation        
+            <label htmlFor="formation">Formation   
+            <App></App>
               <select name="formatioon" id="formatioon">
                 <option value="3-2-2-3">3 - 2 - 2 - 3</option>
                 <option value="3-2-3-1">3 - 2 - 3 - 1</option>
@@ -137,7 +141,7 @@ export default function NewTeam({data}) {
             </label>
             
             <div className={styles.field}>
-              <img src="/icons/playericon.svg" className={styles.img} alt="player"/>  
+              <img src="/taticFormation/3-4-3.svg" className={styles.img} alt="player"/>
             </div>
             <button>Save</button>
           </div>

@@ -134,12 +134,17 @@
 .field {
   background: url('../../public/icons/taticfieldlines.svg') no-repeat center,
     var(--background-field);
-  height: 35rem;
+  height: 38rem;
   margin-top: 1rem;
+  width: 125%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 125%;
+}
+
+.img {
+  top: 30;
+  right: 0;
 }
 
 .players {
