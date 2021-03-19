@@ -5,11 +5,40 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Example from "./components/Tag";
 import App from "./components/SelectFormation";
+import Draggable from "react-draggable";
 import { createLocalStorageStateHook } from "use-local-storage-state";
 
 export const useTodos = createLocalStorageStateHook("todos");
 
+
+
 export default function NewTeam({data}) {
+
+  const eventControl = (event, info) => {
+    console.log('Event name: ', event.type);
+    console.log(event, info);
+  }
+  const state = {
+    deltaXyPos: {
+      x: 0, 
+      y: 0
+    }
+  };
+  let position = null
+  const handleDrag = (e, d) => {
+    const { x, y } = state.deltaXyPos;
+    const setState = ({
+      deltaXyPos: {
+        x: x + d.deltaX,
+        y: y + d.deltaY,
+      }
+    });
+    position=setState
+    console.log(position);
+    
+  };
+  
+  
 
   function Filter() {
     //takes the value from the user and saves it into the state
@@ -32,8 +61,11 @@ export default function NewTeam({data}) {
        );
        setSearchResults(results);
      }, [searchTerm]);
+
+     
    
      return (
+     
        <div className="App">
          <input
            type="text"
@@ -43,9 +75,16 @@ export default function NewTeam({data}) {
            className={styles.inputFilter}
          />
          <ul>
+           
            {searchTerm &&
             (searchResults.map(item => (
-              <Draggable>
+              
+              
+              <Draggable
+              onStart={eventControl}
+              onDrag={handleDrag}
+
+              >
             <div className={styles.playersList}>
               <div className={styles.nameNacionality}>
                 <li>Name: {item}</li>
