@@ -6,8 +6,15 @@ import Link from "next/link";
 import App from "./components/TableSavedTeams";
 import Delete from "./components/Delete";
 import Edit from "./components/Edit";
+import FormDataComponent from "./components/LocalStorage";
+
 
 export default function Home() {
+
+  
+
+
+
   return (
     <div>
 
@@ -33,11 +40,15 @@ export default function Home() {
 
           </div>
           <hr></hr>
+          <FormDataComponent></FormDataComponent>
           <div className={styles.myTeamlist}>
+            
             <App></App>
             <Delete></Delete>
             <Edit></Edit>
           </div>
+          
+
         </div>
 
         <div className={styles.topContainer}>

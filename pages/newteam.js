@@ -3,10 +3,10 @@ import Head from "next/head";
 import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import DraggableComponent from "./components/Draggble";
 import Example from "./components/Tag";
 import App from "./components/SelectFormation";
-import Draggable from "react-draggable";
+import {Teste, Todo, useTodos} from "./components/LocalStorage";
+import FormDataComponent from "./components/LocalStorage";
 
 
 export default function NewTeam({data}) {
@@ -89,7 +89,9 @@ export default function NewTeam({data}) {
           <div className={styles.left}>
 
             <label htmlFor="name">Team name</label>
+            
             <input id="name" name="name" type="text" placeholder="Insert team name" required/>
+            <Teste index="name" name="name" ></Teste>
             <label htmlFor="name">Description</label>
             <input className={styles.description} description="description" type="text" height="50rem"/>
 
@@ -138,6 +140,7 @@ export default function NewTeam({data}) {
             
           </div>          
         </div>
+
 
       </div>      
       <Footer></Footer>
