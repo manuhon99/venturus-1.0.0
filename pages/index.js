@@ -6,14 +6,11 @@ import Link from "next/link";
 import App from "./components/TableSavedTeams";
 import Delete from "./components/Delete";
 import Edit from "./components/Edit";
-import FormDataComponent from "./components/LocalStorage";
+import Todos from "./components/GetLocalStorage";
 
 
 export default function Home() {
-
   
-
-
 
   return (
     <div>
@@ -32,6 +29,7 @@ export default function Home() {
           <div className={styles.myTeamTopBar}>
             <h1>My teams</h1>
             
+            
 
             <Link href="/newteam">
             <button className={styles.myTeamCardButton}>+</button>
@@ -40,15 +38,18 @@ export default function Home() {
 
           </div>
           <hr></hr>
-          <FormDataComponent></FormDataComponent>
+
+          <Todos></Todos>
+          
+          
           <div className={styles.myTeamlist}>
+          
             
             <App></App>
             <Delete></Delete>
             <Edit></Edit>
           </div>
           
-
         </div>
 
         <div className={styles.topContainer}>

@@ -5,9 +5,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Example from "./components/Tag";
 import App from "./components/SelectFormation";
-import {Teste, Todo, useTodos} from "./components/LocalStorage";
-import FormDataComponent from "./components/LocalStorage";
+import { createLocalStorageStateHook } from "use-local-storage-state";
 
+export const useTodos = createLocalStorageStateHook("todos");
 
 export default function NewTeam({data}) {
 
@@ -63,6 +63,15 @@ export default function NewTeam({data}) {
      );
    }
 
+const [todos, setTodos] = useTodos();
+const [todo, setTodo] = useState("");
+
+const onClick = () => {
+  setTodos([...todos, todo]);
+  setTodo("");
+};
+
+
   return (
     <div>
       <Head>
@@ -90,16 +99,15 @@ export default function NewTeam({data}) {
 
             <label htmlFor="name">Team name</label>
             
-            <input id="name" name="name" type="text" placeholder="Insert team name" required/>
-            <Teste index="name" name="name" ></Teste>
+            <input value={todo} onChange={e => setTodo(e.target.value)} id="name" name="name" type="text" placeholder="Insert team name" required/>
             <label htmlFor="name">Description</label>
-            <input className={styles.description} description="description" type="text" height="50rem"/>
+            <input onChange={e => setTodo(e.target.value)} className={styles.description} description="description" type="text" height="50rem"/>
 
 
           </div>
           <div className={styles.right}>
             <label htmlFor="website">Team website</label>
-            <input className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
+            <input onChange={e => setTodo(e.target.value)} className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
 
             <label className={styles.teamTypeLabel} htmlFor="name">Team type</label>
             <div className={styles.teamType} required>
@@ -118,7 +126,7 @@ export default function NewTeam({data}) {
             </div>
             
             <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
-            <Example></Example>
+            <Example onChange={e => setTodo(e.target.value)}></Example>
           </div>
           
         </div>
@@ -130,7 +138,7 @@ export default function NewTeam({data}) {
         <div className={styles.configureSquadContainer}>
           <div className={styles.formation}>
             <App></App>
-            <button>Save</button>
+            <button onClick={onClick}>Save</button>
           </div>
           <div className={styles.players}>           
             <label htmlFor="search">Search Players</label>
