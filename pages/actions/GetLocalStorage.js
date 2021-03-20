@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import useLocalStorageState from 'use-local-storage-state'
 
 export default function Todos() {
-    const [todos, setTodos, isPersistent] = useLocalStorageState('todos', ['buy milk'])
+    const [todos, setTodos, isPersistent] = useLocalStorageState('todos1', ['buy milk'])
 
     return (
         <>

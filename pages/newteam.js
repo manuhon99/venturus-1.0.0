@@ -8,9 +8,9 @@ import App from "./actions/SelectFormation";
 import { createLocalStorageStateHook } from "use-local-storage-state";
 import Filter from "./actions/Filter";
 
-export const useTodos = createLocalStorageStateHook("todos");
-
 export default function NewTeam({data}) {
+
+  const useTodos = createLocalStorageStateHook("todos");
 
   const [todos, setTodos] = useTodos();
   const [todo, setTodo] = useState("");

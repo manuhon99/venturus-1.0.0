@@ -7,11 +7,15 @@ import App from "./components/TableSavedTeams";
 import Delete from "./actions/Delete";
 import Edit from "./actions/Edit";
 import Todos from "./actions/GetLocalStorage";
+import useLocalStorageState from "use-local-storage-state";
 
 
 export default function Home() {
+  const [todos, setTodos, isPersistent] = useLocalStorageState('todos', ['buy milk'])
 
   return (
+    
+    
     <div>
 
       <Head>
@@ -37,8 +41,13 @@ export default function Home() {
 
           </div>
           <hr></hr>
+          
 
-          <Todos></Todos>
+          <Link href={`/teamConfig/${todos[1]}`}>
+              <a>
+                {todos[1]}
+              </a>
+            </Link>
           
 
 
@@ -48,6 +57,8 @@ export default function Home() {
           <div className={styles.myTeamlist}>
           
             
+
+
             <App></App>
             <Delete></Delete>
             <Edit></Edit>
@@ -85,6 +96,7 @@ export default function Home() {
       <Footer></Footer>
 
     </div>
+    
   );
 }
   

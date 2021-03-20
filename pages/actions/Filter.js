@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Draggable from "react-draggable";
-import { actions } from "react-table";
 import styles from "../../styles/components/CreateNewTeam.module.css";
 
 
@@ -85,7 +84,7 @@ export default function Filter({data}) {
             
             <Draggable
             onStart={eventControl}
-            onDrag={handleDrag}
+            onStop={handleDrag}
             >
             <div onDrag={() => setActive(isactive)} className={ isactive ? styles.playersList : styles.playericon}>
               <div className={styles.nameNacionality}>
