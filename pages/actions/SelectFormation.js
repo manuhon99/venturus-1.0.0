@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import styles from "../../styles/components/SelectFormation.module.css";
+import styles from "../../styles/actions/SelectFormation.module.css";
 
 const options = [
   { value: '3-2-2-3', label: '3-2-2-3' },

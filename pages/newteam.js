@@ -1,16 +1,28 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/components/CreateNewTeam.module.css";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Example from "./components/Tag";
-import App from "./components/SelectFormation";
+import App from "./actions/SelectFormation";
 import Draggable from "react-draggable";
 import { createLocalStorageStateHook } from "use-local-storage-state";
 
 export const useTodos = createLocalStorageStateHook("todos");
 
+const MyModule = () => {
+  const [isactive, setActive] = useState(false);
 
+
+  return (
+    
+    <button onClick={() => setActive(!isactive)} >
+      <h1 name='myComponent' style={{background: isactive ? 'red' : 'blue'}}>
+        State: {isactive}
+      </h1>
+    </button>
+  )
+}
 
 export default function NewTeam({data}) {
 
@@ -25,6 +37,7 @@ export default function NewTeam({data}) {
     }
   };
   let position = null
+  let choice = styles.playersList
   const handleDrag = (e, d) => {
     const { x, y } = state.deltaXyPos;
     const setState = ({
@@ -35,6 +48,9 @@ export default function NewTeam({data}) {
     });
     position=setState
     console.log(position);
+    choice=styles.playericon
+    console.log(choice)
+    
     
   };
   
@@ -85,7 +101,8 @@ export default function NewTeam({data}) {
               onDrag={handleDrag}
 
               >
-            <div className={styles.playersList}>
+            <div className={choice}>
+              
               <div className={styles.nameNacionality}>
                 <li>Name: {item}</li>
                 <li>Nacionality: {item}</li>
@@ -130,6 +147,7 @@ const onClick = () => {
 
         <div className={styles.titleArea}>
         <h1>TEAM INFORMATION</h1>
+        <MyModule></MyModule>
         </div>
         
 

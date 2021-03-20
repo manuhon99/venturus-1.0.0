@@ -4,13 +4,12 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 import App from "./components/TableSavedTeams";
-import Delete from "./components/Delete";
-import Edit from "./components/Edit";
-import Todos from "./components/GetLocalStorage";
+import Delete from "./actions/Delete";
+import Edit from "./actions/Edit";
+import Todos from "./actions/GetLocalStorage";
 
 
 export default function Home() {
-  
 
   return (
     <div>
@@ -41,7 +40,11 @@ export default function Home() {
 
           <Todos></Todos>
           
-          
+
+
+
+      
+
           <div className={styles.myTeamlist}>
           
             

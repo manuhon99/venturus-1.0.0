@@ -6,9 +6,6 @@ import { MdEdit } from "react-icons/md";
 import { TiArrowUnsorted } from "react-icons/ti";
 import { IconContext } from "react-icons";
 
-
-import makeData from './makeData'
-
 const Styles = styled.div`
   padding: 1rem;
 
