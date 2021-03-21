@@ -5,7 +5,7 @@ import styles from "../../styles/actions/Filter.module.css";
 //Function to filter searched data on search player input and make items draggable
 export default function Filter({data}) {
 
-  const [isActive, setActive] = useState(true);
+  const [isActive, setActive] = useState(false);
   const state = {
     deltaXyPos: {
       x: 0, 
@@ -26,14 +26,16 @@ export default function Filter({data}) {
     });
     position=setState
     //console.log(position);  
-    setActive(!isActive)
+    setActive(true)
   };
   
   const [searchTerm, setSearchTerm] = React.useState("");
   const [searchResults, setSearchResults] = React.useState([]);
+  const [isSearching, setSearching] = useState(false);
   //when the input value changes the search term is update
   const handleChange = event => {
      setSearchTerm(event.target.value);
+     setSearching(!isSearching)
    };
    //the search result is saved on "results"
    //toLowerCase() converts all types to lower (when typing upper the result will appear anyway)
@@ -55,19 +57,34 @@ export default function Filter({data}) {
         onChange={handleChange}
         className={styles.inputFilter}
       />
-      <ul>  
-        {data.map(item => (
-          <div className={styles.playersList}>
-            <div className={styles.nameNacionality}>
-              <li>Name: {item}</li>
-              <li>Nacionality: {item}</li>
-            </div>
-            <div className={styles.age}>
-              <li>Age: {item}</li>
-            </div>
+      <ul className={ isSearching ? styles.playersListNone : styles.show} >  
+        <div className={styles.playersList}>
+          <div className={styles.nameNacionality}>
+            <li>Name: <p>Cristiano Ronaldo</p></li>
+            <li>Nacionality: <p>Portugal</p></li>
           </div>
-        ))
-        }
+          <div className={styles.age}>
+            <li>Age: <p>32</p></li>
+          </div>
+        </div>
+        <div className={styles.playersList}>
+          <div className={styles.nameNacionality}>
+            <li>Name: <p>Ronaldo Luiz de Alves</p></li>
+            <li>Nacionality: <p>Brasil</p></li>
+          </div>
+          <div className={styles.age}>
+            <li>Age: <p>28</p></li>
+          </div>
+        </div>
+        <div className={styles.playersList}>
+          <div className={styles.nameNacionality}>
+            <li>Name: <p>Ronaldo da Silva de Souza</p></li>
+            <li>Nacionality: <p>Brazil</p></li>
+          </div>
+          <div className={styles.age}>
+            <li>Age: <p>18</p></li>
+          </div>
+        </div>
       </ul>
 
       <ul>    
@@ -76,7 +93,7 @@ export default function Filter({data}) {
             <Draggable
             onStop={handleDrag}
             >
-            <div onClick={() => setActive(isActive)} className={ isActive ? styles.playersList : styles.playericon}>
+            <div className={styles.playersList}>
               <div className={styles.nameNacionality}>
                 <li>Name: {item}</li>
                 <li>Nacionality: {item}</li>
@@ -84,7 +101,7 @@ export default function Filter({data}) {
               <div className={styles.age}>
                 <li>Age: {item}</li>
               </div>
-            </div>
+            </div>          
             </Draggable>
           )))
           }

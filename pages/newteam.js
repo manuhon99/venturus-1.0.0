@@ -11,14 +11,14 @@ import { createLocalStorageStateHook } from "use-local-storage-state";
 //New team page
 export default function NewTeam({data}) {
 
-  const useTodos = createLocalStorageStateHook("todos");
+  const useEquips = createLocalStorageStateHook("equips", []);
 
-  const [todos, setTodos] = useTodos();
-  const [todo, setTodo] = useState("");
+  const [equips, setEquips] = useEquips();
+  const [equip, setEquip] = useState("");
 
   const onClick = () => {
-    setTodos([...todos, todo]);
-    setTodo("");
+    setEquips([...equips, equip]);
+    setEquip("");
   };
 
   return (
@@ -46,15 +46,16 @@ export default function NewTeam({data}) {
 
           <div className={styles.left}>
             <label htmlFor="name">Team name</label>  
-            <input onChange={e => setTodo({'name': e.target.value})} id="name" name="name" type="text" placeholder="Insert team name" required/>
+            <input onChange={e => setEquip({'name': e.target.value})} id="name" name="name" type="text" placeholder="Insert team name" required/>
             <label htmlFor="name">Description</label>
-            <input onChange={e => setTodo({'description': e.target.value})} className={styles.description} description="description" type="text" height="50rem"/>
+            <input onChange={e => setEquip({'description': e.target.value})} className={styles.description} description="description" type="text" height="50rem"/>
           </div>
 
           <div className={styles.right}>
             <label htmlFor="website">Team website</label>
-            <input onChange={e => setTodo({'website': e.target.value})} className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
-            <label className={styles.teamTypeLabel} onChange={e => setTodo({'type': e.target.value})} htmlFor="name">Team type</label>
+            <input onChange={e => setEquip({'website': e.target.value})} className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
+            
+            <label className={styles.teamTypeLabel} onChange={e => setEquip({'type': e.target.value})} htmlFor="name">Team type</label>
             <div className={styles.teamType} required>
               <section>
                 
@@ -74,7 +75,7 @@ export default function NewTeam({data}) {
             </div>
             
             <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
-            <Example onChange={e => setTodo({'tag': e.target.value})}></Example>
+            <Example onChange={e => setEquip({'tag': e.target.value})}></Example>
           </div>
           
         </div>
@@ -86,7 +87,7 @@ export default function NewTeam({data}) {
         <div className={styles.configureSquadContainer}>
           
           <div className={styles.formation} >
-            <App onChange={e => setTodo({'tatic': e.target.value})}></App>
+            <App onChange={e => setEquip({'tatic': e.target.value})}></App>
             <button onClick={onClick} type="submit">Save</button>
           </div>
 

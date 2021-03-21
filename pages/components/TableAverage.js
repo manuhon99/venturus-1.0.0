@@ -4,39 +4,39 @@ export default function TableAverage(){
 
 return(
   <div className={styles.tables}>
-    <table>
+    <table className={styles.tableHighest}>
       <tr>
-        <td><p>Inter Milan</p>  <p>31.9</p></td>
+        <td><p>Inter Milan</p>  <b>31.9</b></td>
       </tr>
       <tr>
-        <td><p>APOEL Nicosia</p> <p>31.7</p></td>
+        <td><p>APOEL Nicosia</p> <b>31.7</b></td>
       </tr>
       <tr>
-        <td><p>AC Milan</p><p>31.6</p></td>
+        <td><p>AC Milan</p><b>31.6</b></td>
       </tr>
       <tr>
-        <td><p>Besiktas JK</p> <p>31.4</p></td>
+        <td><p>Besiktas JK</p> <b>31.4</b></td>
       </tr>
       <tr>
-        <td><p>Olympiacos Piraeus</p><p>31.3</p></td>
+        <td><p>Olympiacos Piraeus</p><b>31.3</b></td>
       </tr>
     </table>
     
-    <table>
+    <table className={styles.tableLowest}>
       <tr>
-        <td><p>Zalgiris Vilnius</p><p>21.1</p></td>                  
+        <td><p>Zalgiris Vilnius</p><b>21.1</b></td>                  
       </tr>
       <tr>
-        <td><p>Arsenal FC</p><p>21.6</p></td>                
+        <td><p>Arsenal FC</p><b>21.6</b></td>                
       </tr>
       <tr>
-        <td><p>Ajax Amsterdam</p><p>22.0</p></td>
+        <td><p>Ajax Amsterdam</p><b>22.0</b></td>
       </tr>
       <tr>
-        <td><p>FC Nantes</p><p>22.1</p></td>
+        <td><p>FC Nantes</p><b>22.1</b></td>
       </tr>
       <tr>
-        <td><p>CSKA Moskow</p><p>22.5</p></td>
+        <td><p>CSKA Moskow</p><b>22.5</b></td>
       </tr>
     </table>
   </div>

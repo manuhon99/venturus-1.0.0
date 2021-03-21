@@ -49,7 +49,7 @@ export default function Home() {
             <div className={styles.myToplist}>
               <div className={styles.titleAvg}>
                 <p>Highest avg age</p>
-                <p>Lowest avg age</p>
+                <p className={styles.low}>Lowest avg age</p>
               </div>
               <TableAverage></TableAverage>
          
@@ -61,9 +61,9 @@ export default function Home() {
 
             <div className={styles.pickMost}>
               <h1>Most picked player</h1>
-              <div>
+              <div className={styles.mostContainer}>
                 <img src="/icons/grayguy.svg" className={styles.img} alt="player1"/>
-                <div>
+                <div className={styles.statistic}>
                   <p>75%</p>
                   <hr></hr>
                 </div>
@@ -72,9 +72,9 @@ export default function Home() {
 
             <div className={styles.pickLess}>
               <h1>Less picked player</h1>
-              <div>
+              <div className={styles.lessContainer}>
                 <img src="/icons/blondeguy.svg" className={styles.img} alt="player2"/>
-                <div>
+                <div className={styles.statistic}>
                   <p>25%</p>
                   <hr></hr>
                 </div>

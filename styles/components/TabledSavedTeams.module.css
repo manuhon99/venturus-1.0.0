@@ -1,0 +1,35 @@
+.table {
+  border-spacing: 0;
+  border: 1px;
+  width: 200%;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: small;
+  color: var(--text-list);
+  margin-left: 1rem;
+}
+
+.allTable {
+  display: flex;
+  flex-direction: row;
+}
+.allTable td {
+  display: inline-block;
+}
+
+.table td {
+  padding-top: 1rem;
+}
+
+.table th {
+  padding-bottom: 1rem;
+  padding-top: 0.2rem;
+  border-right: 0;
+}
+
+.table th span {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
