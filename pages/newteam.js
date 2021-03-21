@@ -47,7 +47,7 @@ export default function NewTeam({data}) {
 
             <label htmlFor="name">Team name</label>
             
-            <input value={todo} onChange={e => setTodo(e.target.value)} id="name" name="name" type="text" placeholder="Insert team name" required/>
+            <input onChange={e => setTodo(e.target.value)} id="name" name="name" type="text" placeholder="Insert team name" required/>
             <label htmlFor="name">Description</label>
             <input onChange={e => setTodo(e.target.value)} className={styles.description} description="description" type="text" height="50rem"/>
 

@@ -4,20 +4,11 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 import App from "./components/TableSavedTeams";
-import Delete from "./actions/Delete";
-import Edit from "./actions/Edit";
-import Todos from "./actions/GetLocalStorage";
-import useLocalStorageState from "use-local-storage-state";
-
 
 export default function Home() {
-  const [todos, setTodos, isPersistent] = useLocalStorageState('todos', ['buy milk'])
 
-  return (
-    
-    
+  return (   
     <div>
-
       <Head>
         <title>Squad Management Tool</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -31,37 +22,17 @@ export default function Home() {
         <div className={styles.myTeamCard}>
           <div className={styles.myTeamTopBar}>
             <h1>My teams</h1>
-            
-            
-
             <Link href="/newteam">
             <button className={styles.myTeamCardButton}>+</button>
             </Link>
-            
-
           </div>
-          <hr></hr>
+          <hr></hr> 
+
+         
           
-
-          <Link href={`/teamConfig/${todos[1]}`}>
-              <a>
-                {todos[1]}
-              </a>
-            </Link>
-          
-
-
-
-      
-
-          <div className={styles.myTeamlist}>
-          
-            
-
-
+          <div className={styles.myTeamlist}>   
             <App></App>
-            <Delete></Delete>
-            <Edit></Edit>
+            
           </div>
           
         </div>
