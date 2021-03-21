@@ -19,7 +19,7 @@
 .field {
   background: url('../../public/icons/taticfieldlines.svg') no-repeat center,
     var(--background-field);
-  height: 38rem;
+  height: 96%;
   margin-top: 1rem;
   width: 125%;
   display: flex;
@@ -30,6 +30,13 @@
 .img {
   top: 30;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img img {
+  width: 100%;
 }
 
 .select {

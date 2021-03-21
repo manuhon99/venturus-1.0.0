@@ -56,7 +56,7 @@ export default function NewTeam({data}) {
             <input onChange={e => setEquip({'website': e.target.value})} className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
             
             <label className={styles.teamTypeLabel} onChange={e => setEquip({'type': e.target.value})} htmlFor="name">Team type</label>
-            <div className={styles.teamType} required>
+            <div className={styles.teamType}>
               <section>
                 
                 <label className={styles.teamTypeRadioButton}>
@@ -108,7 +108,7 @@ export default function NewTeam({data}) {
   );
 }
 
-
+//api football data with a free token that has a limit of 10 requests per minute
 NewTeam.getInitialProps = async (ctx) => {
   var myHeaders = new Headers();
   myHeaders.append("X-Auth-Token", "c6c5ead4f76549e5bc06ed2971336fc0");
@@ -121,7 +121,7 @@ NewTeam.getInitialProps = async (ctx) => {
 
   let list = []
   let jsonList = []
-  for(let i=1;i<4;i++){
+  for(let i=40;i<45;i++){
     let id=i
     const res = await fetch(`https://api.football-data.org/v2/players/${id}`, requestOptions)
     const json = await res.json()

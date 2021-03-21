@@ -4,7 +4,7 @@
   align-items: baseline;
   position: absolute;
   height: 90%;
-  width: 100%;
+  width: 97%;
 }
 
 .container hr {
@@ -17,7 +17,7 @@
 .myTeamCard {
   background: var(--background-card);
   justify-content: center;
-  width: 37rem;
+  width: 45%;
   height: 94%;
   border-radius: 9px;
   margin-left: 1rem;
@@ -70,15 +70,17 @@
 }
 
 .topContainer {
-  margin-left: -1rem;
   margin-top: 1rem;
+  width: 45%;
+  justify-content: center;
+  border-radius: 9px;
 }
 
 .average {
   background: var(--background-card);
   border-radius: 9px;
   height: 21rem;
-  width: 37rem;
+  width: 104%;
   margin-right: 0.5rem;
 }
 
@@ -125,7 +127,7 @@
   border-radius: 9px;
   display: flex;
   height: 13rem;
-  width: 37rem;
+  width: 105%;
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.6rem;

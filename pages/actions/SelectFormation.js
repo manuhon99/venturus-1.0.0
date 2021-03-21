@@ -18,8 +18,8 @@ const options = [
 
 //according the tatic a SVG is showed on screen
 const List = ({formation}) => (
-  <div>
-    <img src={`/taticFormation/${formation}.svg`} alt="tatic"/>
+  <div className={styles.img}>
+    <img src={`/taticFormation/${formation}.svg` } alt="tatic" />
   </div>
 );
 

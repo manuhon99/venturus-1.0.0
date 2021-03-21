@@ -85,9 +85,10 @@ function Table({ columns, data}) {
 //function that creates the table
 function TableTeams() {
 
-  const [todos, setTodos, isPersistent] = useLocalStorageState('todos'+Date()) 
+  //this will be used later, to get the local storage saved team data
+  const [times] = useLocalStorageState('times') 
 
-  const makeData = [{"firstName": "Barcelona", "lastName": "Barcelona Squad"}, {"firstName": "Real Madrid", "lastName": "Real Madrid Squad"}, {"firstName": "Milan", "lastName": "Milan Squad"}, {"firstName": "Liverpool", "lastName": "Liverpool Squad"}, {"firstName": "Bayern Munich", "lastName": "Bayern Munich Squad"}, {"firstName": "Lazio", "lastName": "Lazio Squad"}]
+  const makeData = [{"name": "Barcelona", "description": "Barcelona Squad"}, {"name": "Real Madrid", "description": "Real Madrid Squad"}, {"name": "Milan", "description": "Milan Squad"}, {"name": "Liverpool", "description": "Liverpool Squad"}, {"name": "Bayern Munich", "description": "Bayern Munich Squad"}, {"name": "Lazio", "description": "Lazio Squad"}]
   const [data, setData] = React.useState(React.useMemo(() => makeData, []));
   const columns = React.useMemo(
     () => [
@@ -99,7 +100,7 @@ function TableTeams() {
                 <hr style={{transform: 'rotate(90deg)', width:'1.5rem', marginTop: '0rem'}}></hr>
               </IconContext.Provider>
             ),
-            accessor: 'firstName',
+            accessor: 'name',
           },
           {
             Header: () => ( 
@@ -108,7 +109,7 @@ function TableTeams() {
               </p>
  
             ),
-            accessor: 'lastName',        
+            accessor: 'description',        
           },
 
           {       
@@ -151,7 +152,7 @@ function TableTeams() {
             accessor: 'edit', 
             Cell: () => (
               <span  style={{marginRLeft:'10rem'}}>
-                <Link href={`/teamConfig/${data.firstName}`}>
+                <Link href={`/teamConfig/${data.name}`}>
                   <a style={{color: 'var(--text-list)'}}>
                     <MdEdit/>   
                   </a>

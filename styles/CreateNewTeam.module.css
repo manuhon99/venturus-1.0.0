@@ -1,6 +1,6 @@
 .createContainer {
   background: var(--background-card);
-  width: 76rem;
+  width: 90%;
   height: 100%;
   margin: 2rem auto;
   border-radius: 1rem;
@@ -41,12 +41,13 @@
   font-size: 0.8rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 .left {
-  width: 20rem;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  margin-left: 9rem;
+  margin-left: 14%;
 }
 .left label {
   margin-bottom: 1rem;
@@ -67,10 +68,10 @@
   height: 12rem;
 }
 .right {
-  width: 20rem;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  margin-left: 12.5rem;
+  margin-left: 16%;
 }
 .right label {
   margin-bottom: 1rem;
@@ -97,13 +98,13 @@
 }
 
 .formation {
-  width: 20rem;
+  width: 25.5%;
   display: flex;
   flex-direction: column;
-  margin-left: 9rem;
+  margin-left: 14%;
 }
 .formation button {
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   background: var(--background-save-button);
@@ -118,10 +119,10 @@
 }
 
 .players {
-  width: 20rem;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  margin-left: 12.5rem;
+  margin-left: 16%;
 }
 
 .players li {
@@ -151,7 +152,7 @@
 }
 
 .teamType {
-  width: 45%;
+  width: 70%;
 }
 .teamTypeLabel {
   margin-top: 1.5rem;
