@@ -95,12 +95,23 @@
 .myToplist {
   padding-top: 1rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   font-family: Roboto;
   font-weight: 600;
   font-size: small;
   color: var(--text-list);
+}
+
+.titleAvg {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--title-avarege);
 }
 
 .pick {

@@ -55,6 +55,9 @@
   --field-line: #b173a3;
   --border-color-inputs: #dadada;
   --tag-background: #c50341;
+  --background-avarage: #e9e3e8;
+  --title-avarege: #363636;
+  --list-avarege: #444444;
 }
 
 body {

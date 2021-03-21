@@ -1,0 +1,25 @@
+.tables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: small;
+  color: var(--list-avarege);
+  width: 80%;
+}
+
+.tables table {
+  background: var(--background-avarage);
+  border-radius: 9px;
+  width: 100%;
+}
+
+.tables table td {
+  padding-bottom: 1rem;
+  background: var(--background-card);
+  border-radius: 9px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

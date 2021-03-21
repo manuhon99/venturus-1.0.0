@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import App from "./actions/SelectFormation";
-import styles from "../styles/components/CreateNewTeam.module.css";
+import styles from "../styles/CreateNewTeam.module.css";
 import { createLocalStorageStateHook } from "use-local-storage-state";
 
 //New team page

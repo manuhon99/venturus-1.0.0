@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import styles from "../styles/Home.module.css";
 import TableTeams from "./components/TableSavedTeams";
+import TableAverage from "./components/TableAverage";
 
 //Initial page
 export default function Home() {
@@ -46,8 +47,12 @@ export default function Home() {
             <hr></hr>
 
             <div className={styles.myToplist}>
+              <div className={styles.titleAvg}>
                 <p>Highest avg age</p>
                 <p>Lowest avg age</p>
+              </div>
+              <TableAverage></TableAverage>
+         
             </div>
 
           </div>
@@ -56,12 +61,24 @@ export default function Home() {
 
             <div className={styles.pickMost}>
               <h1>Most picked player</h1>
-              <img src="/icons/grayguy.svg" className={styles.img} alt="player1"/>
+              <div>
+                <img src="/icons/grayguy.svg" className={styles.img} alt="player1"/>
+                <div>
+                  <p>75%</p>
+                  <hr></hr>
+                </div>
+              </div>
             </div>
 
             <div className={styles.pickLess}>
               <h1>Less picked player</h1>
-              <img src="/icons/blondeguy.svg" className={styles.img} alt="player2"/>
+              <div>
+                <img src="/icons/blondeguy.svg" className={styles.img} alt="player2"/>
+                <div>
+                  <p>25%</p>
+                  <hr></hr>
+                </div>
+              </div>
             </div>
             
           </div>

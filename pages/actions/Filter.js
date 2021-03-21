@@ -5,7 +5,7 @@ import styles from "../../styles/actions/Filter.module.css";
 //Function to filter searched data on search player input and make items draggable
 export default function Filter({data}) {
 
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(true);
   const state = {
     deltaXyPos: {
       x: 0, 
@@ -74,10 +74,9 @@ export default function Filter({data}) {
          {searchTerm &&
           (searchResults.map(item => (
             <Draggable
-            onStart={eventControl}
             onStop={handleDrag}
             >
-            <div onDrag={() => setActive(isActive)} className={ isActive ? styles.playersList : styles.playericon}>
+            <div onClick={() => setActive(isActive)} className={ isActive ? styles.playersList : styles.playericon}>
               <div className={styles.nameNacionality}>
                 <li>Name: {item}</li>
                 <li>Nacionality: {item}</li>

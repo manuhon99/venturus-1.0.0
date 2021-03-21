@@ -1,5 +1,5 @@
 // 404.js
-import styles from "../styles/components/Error.module.css";
+import styles from "../styles/Error.module.css";
 
 export default function FourOhFour() {
   return (

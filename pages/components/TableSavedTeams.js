@@ -86,7 +86,7 @@ function Table({ columns, data}) {
             (row, i) => {
               prepareRow(row);
               return (                           
-                <tr {...row.getRowProps()}>              
+                <tr {...row.getRowProps()} onClick={() =>  <IoMdShare/>}>              
                   {row.cells.map(cell => {                   
                     return (                    
                       <td {...cell.getCellProps()}>
@@ -107,7 +107,7 @@ function Table({ columns, data}) {
 }
 
 //function that creates the table
-function TableTeam() {
+function TableTeams() {
   const [todos, setTodos, isPersistent] = useLocalStorageState('todos'+Date()) 
   const makeData = [{"firstName": "Barcelona", "lastName": "Barcelona Squad"}, {"firstName": "Real Madrid", "lastName": "Real Madrid Squad"}, {"firstName": "Milan", "lastName": "Milan Squad"}, {"firstName": "Liverpool", "lastName": "Liverpool Squad"}, {"firstName": "Bayern Munich", "lastName": "Bayern Munich Squad"}, {"firstName": "Lazio", "lastName": "Lazio Squad"}]
   const [data, setData] = React.useState(React.useMemo(() => makeData, []));
