@@ -15,6 +15,11 @@ const Styles = styled.div`
     border-spacing: 0;
     border: 1px ;
     width: 200%;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: small;
+    color: var(--text-list);
     tr{
       :last-child{
         td{
@@ -115,7 +120,7 @@ function TableTeams() {
     () => [
           {
             Header: () => (
-              <IconContext.Provider value={{ color: 'grey', size: '16px' }}>
+              <IconContext.Provider value={{ color: 'var(--text-list)', size: '16px' }}>
                 Name
                 <TiArrowUnsorted/>
                 <hr style={{transform: 'rotate(90deg)', width:'2rem'}}></hr>
@@ -125,7 +130,7 @@ function TableTeams() {
           },
           {
             Header: () => ( 
-              <IconContext.Provider value={{ color: 'grey', size: '16px' }}>
+              <IconContext.Provider value={{ color: 'var(--text-list)', size: '16px' }}>
                 Description
                 <TiArrowUnsorted/>
               </IconContext.Provider>
@@ -151,7 +156,7 @@ function TableTeams() {
                   setData(dataCopy);
                 }}
               >
-                <IoMdTrash/>
+                <IoMdTrash style={{color: 'var(--text-list)'}}/>
               </span>
             )
           },
@@ -160,7 +165,7 @@ function TableTeams() {
             Cell: () => (
               <span             
               >
-                <IoMdShare/>
+                <IoMdShare style={{color: 'var(--text-list)'}}/>
               </span>
             )           
           },
@@ -170,7 +175,7 @@ function TableTeams() {
               <span
               >
                 <Link href={`/teamConfig/${data}`}>
-                  <a style={{color: 'black'}}>
+                  <a style={{color: 'var(--text-list)'}}>
                     <MdEdit/>   
                   </a>
                 </Link>
