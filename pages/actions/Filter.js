@@ -1,16 +1,11 @@
 import React, { useState } from "react";
 import Draggable from "react-draggable";
-import styles from "../../styles/components/CreateNewTeam.module.css";
+import styles from "../../styles/actions/Filter.module.css";
 
-
+//Function to filter searched data on search player input and make items draggable
 export default function Filter({data}) {
 
-  const [isactive, setActive] = useState(false);
-
-  const eventControl = (event, info) => {
-    console.log('Event name: ', event.type);
-    console.log(event, info);
-  }
+  const [isActive, setActive] = useState(false);
   const state = {
     deltaXyPos: {
       x: 0, 
@@ -19,6 +14,8 @@ export default function Filter({data}) {
   };
   let position = null
   
+  //get x y position of item while dragging it
+  //chage state that indicates when element is dragging
   const handleDrag = (e, d) => {
     const { x, y } = state.deltaXyPos;
     const setState = ({
@@ -28,32 +25,27 @@ export default function Filter({data}) {
       }
     });
     position=setState
-    console.log(position);  
-    setActive(!isactive)
-    
+    //console.log(position);  
+    setActive(!isActive)
   };
   
-  //takes the value from the user and saves it into the state
   const [searchTerm, setSearchTerm] = React.useState("");
-  //set the search result
   const [searchResults, setSearchResults] = React.useState([]);
-  //takes the event object as the arguement and sets the current value of the 
-  //form to the searchTerm state using setSearchTerm method provided by 
-  //React.useState method
+  //when the input value changes the search term is update
   const handleChange = event => {
      setSearchTerm(event.target.value);
    };
-   //whenever the value of the dependencies in the React.useEffect hook 
-   //changes the function in its first argument execute
+   //the search result is saved on "results"
+   //toLowerCase() converts all types to lower (when typing upper the result will appear anyway)
   React.useEffect(() => {
-    //if the name in the names's list includes the searchTerm then return 
-    //true otherwise return false
      const results = data.filter(filtered =>
        filtered.toLowerCase().includes(searchTerm.toLowerCase())
      );
      setSearchResults(results);
    }, [searchTerm]);
 
+   //an input field is render with an unnorder list to show the data filtered
+   //each result item is draggable
    return (
      <div className="App">
       <input
@@ -77,16 +69,15 @@ export default function Filter({data}) {
         ))
         }
       </ul>
-      <ul>
-         
+
+      <ul>    
          {searchTerm &&
           (searchResults.map(item => (
-            
             <Draggable
             onStart={eventControl}
             onStop={handleDrag}
             >
-            <div onDrag={() => setActive(isactive)} className={ isactive ? styles.playersList : styles.playericon}>
+            <div onDrag={() => setActive(isActive)} className={ isActive ? styles.playersList : styles.playericon}>
               <div className={styles.nameNacionality}>
                 <li>Name: {item}</li>
                 <li>Nacionality: {item}</li>
@@ -97,7 +88,7 @@ export default function Filter({data}) {
             </div>
             </Draggable>
           )))
-            }
+          }
       </ul>
      </div>
    );

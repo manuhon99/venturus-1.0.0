@@ -1,5 +1,6 @@
 import styles from '../../styles/components/Footer.module.css';
 
+//Footer component
 export function Footer() {
   return (
     <div className={styles.footer}>

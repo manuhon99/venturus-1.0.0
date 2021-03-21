@@ -1,11 +1,8 @@
-import { useRouter } from 'next/router'
 import NewTeam from '../newteam'
 
+//creating dynamic routes
 export default function Post ({data}) {
-  const router = useRouter()
-  const { slug } = router.query
   return <div>
-    <p>Post: {slug}</p>
     <NewTeam data={data}></NewTeam>
   </div>
 }

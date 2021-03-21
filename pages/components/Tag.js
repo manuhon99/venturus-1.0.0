@@ -1,8 +1,7 @@
 import React from "react";
 import TagsInput from "react-tagsinput";
 
-
-
+//Tag component
 class Example extends React.PureComponent {
   
   constructor() {
@@ -13,19 +12,20 @@ class Example extends React.PureComponent {
       tag: ""
     };
   }
+
   handleChange = tags => {
     this.setState({ tags });
   };
+
   handleInputChange = value => {
     if (value.length > 8) {
       return this.tagsinput.current.accept();
     }
     this.setState({ tag: value });
   };
+
   render() {
-    
     return (
-      
       <TagsInput
         onlyUnique
         ref={this.tagsinput}

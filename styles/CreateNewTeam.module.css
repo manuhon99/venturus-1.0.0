@@ -124,36 +124,6 @@
   margin-left: 12.5rem;
 }
 
-.playericon {
-  background: url('../../public/icons/playericon.svg') no-repeat;
-}
-
-.playersList {
-  background: url('../../public/dataplayerresult.svg') no-repeat;
-  background-size: 96%;
-  width: 128%;
-  height: 10rem;
-  margin-bottom: -4.5rem;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-left: 1rem;
-}
-
-.playersList ::selection {
-  background: url('../../public/icons/playericon.svg') no-repeat;
-}
-
-.nameNacionality {
-  flex-direction: column;
-}
-.nameNacionality li {
-  margin-bottom: 0.5rem;
-}
-
-.age {
-  margin-right: 3rem;
-}
 .players li {
   list-style-type: none;
 }

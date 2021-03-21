@@ -1,13 +1,14 @@
-import React, { useState } from "react";
 import Head from "next/head";
-import styles from "../styles/components/CreateNewTeam.module.css";
+import Filter from "./actions/Filter";
+import Example from "./components/Tag"; 
+import React, { useState } from "react";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Example from "./components/Tag";
 import App from "./actions/SelectFormation";
+import styles from "../styles/components/CreateNewTeam.module.css";
 import { createLocalStorageStateHook } from "use-local-storage-state";
-import Filter from "./actions/Filter";
 
+//New team page
 export default function NewTeam({data}) {
 
   const useTodos = createLocalStorageStateHook("todos");
@@ -22,6 +23,7 @@ export default function NewTeam({data}) {
 
   return (
     <div>
+
       <Head>
         <title>Squad Management Tool</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -33,7 +35,6 @@ export default function NewTeam({data}) {
       <div className={styles.createContainer}>
         <div className={styles.createTopBar}>
           <h1>Create your team</h1>
-          
         </div>
         <hr/>
 
@@ -41,66 +42,67 @@ export default function NewTeam({data}) {
         <h1>TEAM INFORMATION</h1>
         </div>
         
-
         <div className={styles.teamInformationContainer}>
+
           <div className={styles.left}>
-
-            <label htmlFor="name">Team name</label>
-            
-            <input onChange={e => setTodo(e.target.value)} id="name" name="name" type="text" placeholder="Insert team name" required/>
+            <label htmlFor="name">Team name</label>  
+            <input onChange={e => setTodo({'name': e.target.value})} id="name" name="name" type="text" placeholder="Insert team name" required/>
             <label htmlFor="name">Description</label>
-            <input onChange={e => setTodo(e.target.value)} className={styles.description} description="description" type="text" height="50rem"/>
-
-
+            <input onChange={e => setTodo({'description': e.target.value})} className={styles.description} description="description" type="text" height="50rem"/>
           </div>
+
           <div className={styles.right}>
             <label htmlFor="website">Team website</label>
-            <input onChange={e => setTodo(e.target.value)} className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
-
-            <label className={styles.teamTypeLabel} htmlFor="name">Team type</label>
+            <input onChange={e => setTodo({'website': e.target.value})} className={styles.noTag} id="website" name="website" type="url" pattern="https?://.+" placeholder="http://myteam.com" required/>
+            <label className={styles.teamTypeLabel} onChange={e => setTodo({'type': e.target.value})} htmlFor="name">Team type</label>
             <div className={styles.teamType} required>
               <section>
+                
                 <label className={styles.teamTypeRadioButton}>
                   <p>Real</p>
                   <input type="radio" name="choice" />
                   <span className={styles.checkMark}></span>
                 </label>
+
                 <label className={styles.teamTypeRadioButton}>
                   <p>Fantasy</p>
                   <input type="radio" name="choice"/>
                   <span className={styles.checkMark}></span>
                 </label>
+
               </section>
             </div>
             
             <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
-            <Example onChange={e => setTodo(e.target.value)}></Example>
+            <Example onChange={e => setTodo({'tag': e.target.value})}></Example>
           </div>
           
         </div>
 
         <div className={styles.titleArea}>
-        <h1>CONFIGURE SQUAD</h1>
+          <h1>CONFIGURE SQUAD</h1>
         </div>
 
         <div className={styles.configureSquadContainer}>
-          <div className={styles.formation}>
-            <App></App>
-            <button onClick={onClick}>Save</button>
+          
+          <div className={styles.formation} >
+            <App onChange={e => setTodo({'tatic': e.target.value})}></App>
+            <button onClick={onClick} type="submit">Save</button>
           </div>
+
           <div className={styles.players}>           
             <label htmlFor="search">Search Players</label>
-            
-
+        
             <Filter data={data}></Filter>
+
             <hr></hr>
             
           </div>          
         </div>
-
-
       </div>      
+
       <Footer></Footer>
+
     </div>
   );
 }

@@ -1,14 +1,16 @@
+import Link from "next/link";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Link from "next/link";
-import App from "./components/TableSavedTeams";
+import styles from "../styles/Home.module.css";
+import TableTeams from "./components/TableSavedTeams";
 
+//Initial page
 export default function Home() {
 
   return (   
     <div>
+
       <Head>
         <title>Squad Management Tool</title>
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -27,37 +29,41 @@ export default function Home() {
             </Link>
           </div>
           <hr></hr> 
-
-         
-          
+     
           <div className={styles.myTeamlist}>   
-            <App></App>
-            
+            <TableTeams></TableTeams> 
           </div>
           
         </div>
 
         <div className={styles.topContainer}>
           <div className={styles.average}>
+
             <div className={styles.myTopBar}>
               <h1>Top 5</h1>
             </div>
+
             <hr></hr>
+
             <div className={styles.myToplist}>
                 <p>Highest avg age</p>
                 <p>Lowest avg age</p>
             </div>
+
           </div>
 
           <div className={styles.pick}>
+
             <div className={styles.pickMost}>
               <h1>Most picked player</h1>
               <img src="/icons/grayguy.svg" className={styles.img} alt="player1"/>
             </div>
+
             <div className={styles.pickLess}>
               <h1>Less picked player</h1>
               <img src="/icons/blondeguy.svg" className={styles.img} alt="player2"/>
             </div>
+            
           </div>
 
         </div>

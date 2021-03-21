@@ -1,5 +1,6 @@
 import styles from '../../styles/components/Navbar.module.css';
 
+//Navbar component
 export function Navbar() {
   return (
     <div className={styles.navbar}>
