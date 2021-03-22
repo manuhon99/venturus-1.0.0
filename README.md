@@ -1,6 +1,6 @@
-<h4 align="center"> 
+<h2 align="center"> 
 	Squad Management Team - Venturus
-</h4>
+</h2>
 <h5 align="center"> 
 	🚧  Status: In progress (the work is paused because deadline )
 </h5>
