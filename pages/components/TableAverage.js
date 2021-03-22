@@ -1,4 +1,4 @@
-import styles from "../../styles/components/TableAvarage.module.css";
+import styles from '../../styles/components/TabledSavedTeams.module.css';
 
 export default function TableAverage(){
 
