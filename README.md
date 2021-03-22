@@ -1,9 +1,9 @@
-<h4 align="center"> 
-	Venturus
-</h4>
-<h4 align="center"> 
-	🚧  Status: Concluído 
-</h4>
+<h2 align="center"> 
+	Squad Management Team - Venturus
+</h2>
+<h5 align="center"> 
+	🚧  Status: In progress (the work is paused because deadline )
+</h5>
 
 <p align="center">
  <a href="#-sobre-o-projeto">About</a> •
@@ -18,7 +18,7 @@
 
 ## 💻 About
 
-Aplicação web para visualização da grade programação da RPC, filiada da Rede Globo.
+Web application Squad Management Tool test for junior front-end developer.
 
 ---
 
@@ -96,7 +96,7 @@ Phase 3
 
 ## :runner: How to access
 
-### This project is on Vercel [Vercel](https://rpc-manuhon99.vercel.app/)
+### This project is deployed on Vercel [Vercel](https://rpc-manuhon99.vercel.app/)
 
 ---
 
@@ -112,19 +112,19 @@ Running the web application (Frontend)
 
 ```bash
 
-# Clone este repositório
-$ git clone https://github.com/manuhon99/.git
+# Clone this project
+$ git clone https://github.com/manuhon99/venturus-1.0.0.git
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd rpc
+# Access the folder
+$ cd venturus
 
-# Instale as dependências
+# Install the dependencies
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
+# Execute
 $ npm run dev
 
-# O servidor inciará na porta:3000 - acesse http://localhost:3000
+# The application will be load on port:3000 - http://localhost:3000
 ```
 
 ---
@@ -134,9 +134,16 @@ $ npm run dev
 The following tools were used in the construction of the project:
 
 - [NextJS](https://nextjs.org/)
-- [React icons]()
+- [React](https://pt-br.reactjs.org/)
+- [React-draggable](https://www.npmjs.com/package/react-draggable)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- [React-select](https://react-select.com/)
+- [React-table](https://www.npmjs.com/package/react-table)
+- [React-tageditor](https://www.npmjs.com/package/react-tageditor)
+- [React-tagsinput](https://www.npmjs.com/package/react-tag-input)
+- [Use-local-storage-state](https://www.npmjs.com/package/use-local-storage-state)
 - [Figma](https://www.figma.com/)
-- [ API]()
+- [Football API](http://api.football-data.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Postman](https://www.postman.com/)
 
@@ -150,6 +157,6 @@ The following tools were used in the construction of the project:
 
 ## 📝 Licença
 
-Este projeto esta sobe a licença [MIT](./LICENSE).
+[MIT](./LICENSE).
 
 ---
