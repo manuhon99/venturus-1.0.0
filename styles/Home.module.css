@@ -178,3 +178,41 @@
   margin-top: 0rem;
   width: 150%;
 }
+
+@media screen and (max-width: 720px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .myTeamCard {
+    justify-content: center;
+    width: 80%;
+    height: 140%;
+    border-radius: 9px;
+    margin-left: 10%;
+    margin-top: 50rem;
+  }
+
+  .topContainer {
+    margin-top: 1rem;
+    width: 77%;
+    justify-content: center;
+    border-radius: 9px;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .low {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .low {
+    margin-left: 10%;
+  }
+}

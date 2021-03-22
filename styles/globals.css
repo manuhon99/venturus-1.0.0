@@ -44,7 +44,7 @@
   --text-list: #333333;
   --text-create-title: #8e8e8e;
   --separator-line: #eeeeee;
-  --input-border: F1F1F1;
+  --input-border: #f1f1f1;
   --team-type-button-selected: linear-gradient(
     180deg,
     #b43c7b 0%,
@@ -70,4 +70,10 @@ input,
 textarea,
 button {
   font: 400 16px 'Inter', sans-serif;
+}
+
+@media screen and (max-width: 720px) {
+  .html {
+    font-size: 80%;
+  }
 }

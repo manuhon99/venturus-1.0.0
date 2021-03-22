@@ -57,21 +57,23 @@ export default function NewTeam({data}) {
             
             <label className={styles.teamTypeLabel} onChange={e => setEquip({'type': e.target.value})} htmlFor="name">Team type</label>
             <div className={styles.teamType}>
-              <section>
-                
+              <section>            
                 <label className={styles.teamTypeRadioButton}>
                   <p>Real</p>
                   <input type="radio" name="choice" />
                   <span className={styles.checkMark}></span>
                 </label>
+              </section>
 
+              <section className={styles.fantasy}>
                 <label className={styles.teamTypeRadioButton}>
                   <p>Fantasy</p>
                   <input type="radio" name="choice"/>
                   <span className={styles.checkMark}></span>
                 </label>
-
               </section>
+
+              
             </div>
             
             <label className={styles.tagInputLabel} htmlFor="name">Tags</label>
@@ -127,7 +129,6 @@ NewTeam.getInitialProps = async (ctx) => {
     const json = await res.json()
     jsonList.push(json)
   }
-  console.log(jsonList)
   jsonList.map((player) => {
     list.push(player.name)
   })

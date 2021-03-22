@@ -95,11 +95,11 @@ export default function Filter({data}) {
             >
             <div className={styles.playersList}>
               <div className={styles.nameNacionality}>
-                <li>Name: {item}</li>
-                <li>Nacionality: {item}</li>
+                <li>Name: <p>{item}</p></li>
+                <li>Nacionality: <p>{item.nationality}</p></li>
               </div>
               <div className={styles.age}>
-                <li>Age: {item}</li>
+                <li>Age: <p>{item.age}</p></li>
               </div>
             </div>          
             </Draggable>

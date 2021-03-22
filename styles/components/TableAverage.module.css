@@ -34,3 +34,66 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 720px) {
+  .tables table td {
+    width: 78%;
+  }
+  .tables {
+    width: 80%;
+  }
+
+  .tables table {
+    background: var(--background-avarage);
+    border-radius: 9px;
+    width: 100%;
+    margin-top: -1rem;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .tables table td {
+    width: 78%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .tables table td {
+    width: 74%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .tables {
+    font-size: 0.7rem;
+    color: var(--list-avarege);
+    width: 95%;
+  }
+
+  .tables table {
+    background: var(--background-avarage);
+    border-radius: 9px;
+    width: 100%;
+    margin-top: -1rem;
+  }
+
+  .tableLowest {
+    margin-left: 0.5rem;
+  }
+
+  .tables table td {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .tables {
+    width: 90%;
+  }
+  .tableLowest {
+    margin-left: 0.1rem;
+  }
+  .tables table td {
+    width: 70%;
+  }
+}

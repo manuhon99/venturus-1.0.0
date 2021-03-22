@@ -4,7 +4,7 @@
 
 .playersList {
   background: url('../../public/dataplayerresult.svg') no-repeat;
-  background-size: 96%;
+  background-size: 95%;
   width: 128%;
   height: 10rem;
   margin-bottom: -4.5rem;
@@ -43,4 +43,25 @@
 
 .playersListNone {
   display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .playersList {
+    font-size: 0.7rem;
+    background: url('../../public/dataplayerresultsx1.svg') no-repeat;
+    background-size: 95%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .playersList {
+    background: url('../../public/dataplayerresultsx2.svg') no-repeat;
+    background-size: 95%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .playersList {
+    font-size: 0.6rem;
+  }
 }
