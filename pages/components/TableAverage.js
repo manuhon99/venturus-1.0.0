@@ -1,4 +1,4 @@
-import styles from "../../styles/Components/TableAvg.module.css";
+import styles from "../../styles/Components/Tableavarage.module.css";
 
 export default function TableAverage(){
 
