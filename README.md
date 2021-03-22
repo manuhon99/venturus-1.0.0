@@ -1,9 +1,9 @@
 <h4 align="center"> 
-	Venturus
+	Squad Management Team - Venturus
 </h4>
-<h4 align="center"> 
+<h5 align="center"> 
 	🚧  Status: In progress (the work is paused because deadline )
-</h4>
+</h5>
 
 <p align="center">
  <a href="#-sobre-o-projeto">About</a> •
@@ -18,7 +18,7 @@
 
 ## 💻 About
 
-Web application Squad Management Tool Venturus.
+Web application Squad Management Tool test for junior front-end developer.
 
 ---
 
@@ -134,6 +134,14 @@ $ npm run dev
 The following tools were used in the construction of the project:
 
 - [NextJS](https://nextjs.org/)
+- [React](https://pt-br.reactjs.org/)
+- [React-draggable](https://www.npmjs.com/package/react-draggable)
+- [React-icons](https://react-icons.github.io/react-icons/)
+- [React-select](https://react-select.com/)
+- [React-table](https://www.npmjs.com/package/react-table)
+- [React-tageditor](https://www.npmjs.com/package/react-tageditor)
+- [React-tagsinput](https://www.npmjs.com/package/react-tag-input)
+- [Use-local-storage-state](https://www.npmjs.com/package/use-local-storage-state)
 - [Figma](https://www.figma.com/)
 - [Football API](http://api.football-data.org/)
 - [Visual Studio Code](https://code.visualstudio.com/)
